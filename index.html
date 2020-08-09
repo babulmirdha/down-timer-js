@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+<body>
+
+<p>A script on this page starts this clock:</p>
+<p id="demo"></p>
+<p> Timer :</p>
+<p id="dtimer"></p>
+<script src="./down_timer.js"></script>
+<script>
+
+
+downCounter = new DownTimer(1,'#dtimer');
+
+
+
+downCounter.start(function(){
+    alert("end")
+})
+
+minutes = 50;
+ const END_SEC = 4 
+seconds = END_SEC
+
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  document.getElementById("demo").innerHTML = minutes + ":" + seconds;
+        if( seconds > 0 ){
+          seconds-- ;
+        }else{
+           seconds = END_SEC;
+           minutes--;
+        }
+
+ 
+}
+</script>
+
+</body>
+</html>
